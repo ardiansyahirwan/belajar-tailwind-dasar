@@ -4,7 +4,7 @@
   "main": "tailwind.config.js",
   "scripts": {
     "watch": "npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch",
-    "pretty" : "npx prettier --write ./build/*.html"
+    "pretty": "npx prettier --write ./build/*.html"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,8 @@
   "description": "",
   "devDependencies": {
     "prettier": "^3.3.3"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.11"
   }
 }

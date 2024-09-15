@@ -22,6 +22,7 @@
     - [Background Size](#background-size)
     - [background Repeat](#background-repeat)
     - [Background Position](#background-position)
+    - [Images](#images)
   - [Border](#border)
     - [Divide](#divide)
     - [Outline](#outline)
@@ -48,6 +49,7 @@
     - [Float](#float)
     - [position](#position)
     - [Column](#column)
+  - [Responsive Design](#responsive-design)
 
 ## Installation
 
@@ -281,6 +283,10 @@ untuk mengulang gambar, jika konten gambar tidak terpenuhi. jika anda menggunaka
 
 untuk mengatur posisi gambar yang kontennya tidak terpenuhi, bisa geser ke atas bawah kiri kanan.
 
+### Images
+
+untuk mengatur gambar kamu bisa menggunakan `object-cover` untuk gambar jika `scretch` atau melebar. dan gunakan `object-top` untuk mengambil gambar posisi atas
+
 ## Border
 
 untuk membuat garis pada suatu element seperti border-radius
@@ -426,3 +432,24 @@ setelah position nya di declarasikan di dalam `class` kita bisa atur posisinya m
 ### Column
 
 gunakan keyword `columns` dan `- jumlahnya` misal `columns-3`
+
+## Responsive Design
+
+`**tips**` pada saat membuat button menggunakan `<a></a>` pastikan untuk mengubah `display` nya menjadi `inline-block` agar bisa di berikan `padding`. ketika membuat `Responsive Design` perhatikan hal-hal berikut:
+
+- selalu awali dengan tampilan `mobile` untuk memberikan nilai awal
+- Berikan `max-width` awal ketika elemen ingin terlihat di `breakpoint` handphone atau ketika ingin terlihat di seluruh `breakpoint`.
+- untuk mempermudah, berikan `background` disetiap `breakpoint` untuk mengetahui titik dimana `breakpoint` berubah.
+
+```html
+<div class="max-w-md sm:bg-sky-200 md:bg-red-200 xl:bg-yellow-200 lg:bg-lime-200"></div>
+```
+
+- jika ingin memberikan `max-width` di keadaan tertentu maka kembalikan nilai awal di `breakpoint` terdekat dengan nilai yang ingin kita ubah. misal kita ingin di breakpoint awal dan breakpoint md tidak berubah, hanya ingin berubah ketika di sm maka bisa di lakukan hal berikut:
+
+```html
+<div class="max-w-md sm:max-w-full md:max-w-md"></div>
+```
+
+- secara default tailwind itu membuat design untuk `mobile first design` jadi diutamakan untuk `mobile design` terlebih dahulu
+- berikan css dari `breakpoint handphone` lalu`sm` `md` `xl` **satu persatu**

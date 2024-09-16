@@ -50,6 +50,9 @@
     - [position](#position)
     - [Column](#column)
   - [Responsive Design](#responsive-design)
+  - [Flex](#flex)
+    - [Display Flex](#display-flex)
+  - [Grid](#grid)
 
 ## Installation
 
@@ -453,3 +456,26 @@ gunakan keyword `columns` dan `- jumlahnya` misal `columns-3`
 
 - secara default tailwind itu membuat design untuk `mobile first design` jadi diutamakan untuk `mobile design` terlebih dahulu
 - berikan css dari `breakpoint handphone` lalu`sm` `md` `xl` **satu persatu**
+
+## Flex
+
+### Display Flex
+
+ memberikan `display flex` pada komponen, akan memberikan komponen `behavior flex` atau sifat flex.
+
+- `flex-1` digunakan untuk menambahkan `grow 1 shrink 1`
+- jika menambahkan `flex` pada komponen maka prilakunya akan menjadi `flex-items`
+- `flex-wrap` untuk membuat element tidak memenuhi containernya, dan langsung turun mengisi ruang di bawahnya
+- `flex-grow` seberapa banyak element flex berkembang terhadap containernya. nilai `0` tidak bertumbuh. `1` bertumbuh
+- `flex-shrink` seberapa banyak element flex menyusut terhadap containernya. nilai `0` tidak menyusut. `1` menyusut
+- `flex-basis` menetapkan ukuran awal sebelum element bertumbuh
+- ketika memberi parent display `flex` kita bisa memberikan `self-center` pada child komponen untuk memindahkan komponen ke tengah
+
+## Grid
+
+- jika kita ingin memberikan ukuran fix pada element kita bisa menggunakan `aspect-ratio`
+- untuk membuat kolom layout lebih mudah menggunakan `grid` dan nanti tinggal menambahkan `behavior-grid` nya
+- `grid-cols` untuk membuat column
+- `col-start` untuk membuat element mulai dari column tertentu
+- `row-start` untuk membuat element mulai dari row tertentu
+- untuk mengubah posisi element di dalam grid, lebih baik menggunakan flex

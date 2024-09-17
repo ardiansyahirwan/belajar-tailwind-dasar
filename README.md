@@ -53,6 +53,7 @@
   - [Flex](#flex)
     - [Display Flex](#display-flex)
   - [Grid](#grid)
+  - [Function \& Directive](#function--directive)
 
 ## Installation
 
@@ -479,3 +480,24 @@ gunakan keyword `columns` dan `- jumlahnya` misal `columns-3`
 - `col-start` untuk membuat element mulai dari column tertentu
 - `row-start` untuk membuat element mulai dari row tertentu
 - untuk mengubah posisi element di dalam grid, lebih baik menggunakan flex
+
+## Function & Directive
+
+- kamu bisa menggunakan `directive` `@tailwind` untuk memanggil tailwind dan ;
+- `@tailwind base` untuk memangil base component dari tailwind
+- `@tailwind components` untuk memanggil components tailwind
+- `@tailwind utilities` untuk memanggil utility tailwind
+- kamu juga bisa membuat komponen sendiri dengan menggunakan `@layer` lalu di tambahkan dengan komponen apa yang ingin dibuat, apakah itu `base` `components` atau `utilities`
+  
+```css
+@layer base {
+  h1 {
+    @apply text-lg;
+  }
+}
+```
+
+- urutan compile nya akan beururutan mulai dari `base` `components` adan `utilities`
+- kamu bisa menggunakan `@apply` jika ingin menggunakan class dari tailwind untuk membuat komponent
+
+untuk lebih jelas nya mengenai function dan directive bisa mengunjungi [tailwindcss.com](https://tailwindcss.com)
